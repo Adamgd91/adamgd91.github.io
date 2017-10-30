@@ -1,0 +1,241 @@
+CSS= Cascading Style Sheets
+
+<h1> Is the biggest header... usually for titles etc...
+<h1> Goes to <h6>... Always end with a </h1,2,3,4,5,6>
+<p> Creates a paragraph
+<li> For dots </li>
+<!-- I can comment anything in this and it won't affect the code itself-->
+________________________________________________________________________________
+
+<h2 style="color: blue">This text will change to the color you choose</h2>
+<!-- NOTE: ^^^ For easier color use CSS style... -->
+<style>
+    h2 {color: red;}
+</style>
+<!-- NOTE: For the best use of CSS class declaration use this method. If I want to have just a specific P or H individually colored. -->
+<style>
+    .blue-text {
+        color: blue;
+    }
+</style>
+
+<h1 class="blue-text">Hello World</h1>
+<!-- NOTE: Use this code at the beginning. When you type in class="blue-text"This will be the color of your choice. -->
+________________________________________________________________________________
+<!-- NOTE: Inside the <style> </style> I can add font-size -->
+<style>
+    .blue-text {
+        color: blue;
+    }
+
+    p {
+        font-size: 20px;
+    }
+</style>
+<!-- NOTE: Inside the <style> </style> I can add font-family(style of the text) -->
+<style>
+    .blue-text {
+        color: blue;
+    }
+
+    p {
+        font-family: Monospace;
+        font-size: 20px;
+    }
+</style>
+---------------ALL the <p> will be Monospace and 20px now!!!
+________________________________________________________________________________
+
+<img src="https://kitten.com/your-image.jpg" alt="kitten">
+--------------- All img src= needs an alt attribute. Alt is for when display isn't shown
+________________________________________________________________________________
+
+<style>
+  .smaller-image {
+    width: 50px;
+  }
+</style>
+--------------- CSS has width just like text px that controls the widths of img.
+<img class="smaller-image" src="http://kitten.com/image.jpg" atl="kitten">
+<!-- NOTE: DOES THAT MEAN ALL IMAGES WILL BE 50px??? I'm confused -->
+<!-- NOTE: I believe no unless I use the smaller-image class -->
+
+<style>
+  .smaller-image {
+    width: 100px;
+  }
+  .thick-green-border {
+    border-color: green;
+    border-width: 10px;
+    border-style: solid;
+  }
+</style>
+<!-- NOTE: If I want round edges use border-radius: 10px -->
+<!-- NOTE: If I want a circle use border-radius: 50% -->
+<img class="smaller-image thick-green-border" src="http://kitten.com/image.jpg" atl="kitten">
+<!-- NOTE: This will make my image the smaller-image AND thick-green-border style that I decided! -->
+________________________________________________________________________________
+--------------- a(anchors) link to content outside of the current page
+<p>This is <!-- NOTE: beginning of the sentence -->
+  <a href="http://codelife.com"> <!-- NOTE: The link it will bring you too -->
+    the life I want <!-- NOTE: These are for the link when you click on the words -->
+  </a>
+  to live. For the future. <!-- NOTE: Words after the clicked words -->
+</p>
+<!-- NOTE: Better way --><p>This is <a href="http://codelife.com"> the life I want</a>for myself</p>
+<!-- NOTE: Dead link use # --><p>This is <a href="#"> the life I want</a>for myself</p>
+________________________________________________________________________________
+--------------- Making list and bullet points
+<ul><!-- NOTE: Creates the list -->
+  <li>Just believe</li><!-- NOTE: Creates the bullet points -->
+  <li>It will happen</li>
+</ul>
+--------------- Making a number list
+<ol>
+  <li>You can do it</li>
+  <li>Don't give up</li>
+  <li>Study while people are sleeping and you will become something in the future</li>
+</ol>
+________________________________________________________________________________
+--------------- Creating a web form. Way to get feedback(makes a box)
+<input type="text">!--Text input element-->
+<input type="text" placeholder="Input Bryan"><!-- NOTE: This will show up in the box -->
+________________________________________________________________________________
+--------------- Form element can submit data to a server.
+<form action="/url-where-you-want-to-submit-form-data"></form>
+<form action="/whatever"><input type="text"></form>
+<button type="submit">This will show the text you want></button>
+<input type="text" placeholder="Input Bryan" required>
+                                            ^^<!-- NOTE: This will make it required to fill out this section no matter what -->
+<label><input type="radio" name="good">Yes</label>
+<label><input type="radio" name="no"> No  </label>
+^^<!-- NOTE: This creates circle buttons that you can use for questionaires etc. -->
+<label><input type="checkbox" name="Motivation"> Job sercurity</label>
+<label><input type="checkbox" name="Motivation"> Knowledge</label>
+<label><input type="checkbox" name="Motivation"> POWER</label>
+<!-- NOTE: This creates squared checkboxes you can use etc. -->
+________________________________________________________________________________
+<style> /* NOTE: When using id="cat-photo-form" the background will be green */
+  #cat-photo-form {
+    background-color: green;
+  }
+</style>
+________________________________________________________________________________
+________________________________________________________________________________
+<!-- NOTE: Creating boxes.... Padding, margin, and border -->
+<!-- NOTE: Padding controls the amount of space between the element and its border -->
+<style>
+  .injected-text {
+    margin-bottom: -15px;
+    text-align: center;
+  }
+  .box {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+  }
+  .yellow-box {
+    background-color: yellow;
+    padding: 10px;
+  }
+  .red-box {
+    background-color: red;
+    padding: 10px 20px 10px 20px; /* NOTE: This does TOP, RIGHT, BOTTOM, LEFT... clockwise */
+  }
+  .green-box {
+    background-color: green;
+    margin: 10px 20px 10px 20px; /* NOTE: This does TOP, RIGHT, BOTTOM, LEFT... clockwise */
+  }
+</style>
+
+<h5 class="injected-text">Become</h5>
+
+<div class="box yellow-box">
+  <h5 class="box red-box">Don't give up</h5>
+  <h5 class="box green-box"> Faith</h5>
+</div>
+_______________________________________________________________________________
+
+<style>
+  body {
+    background-color: black;
+    font-family: Monospace;
+    color: green;
+  }
+  #orange-text {
+    color: orange;
+  }
+  .pink-text {
+    color: pink !important; /* NOTE: This will override any CSS and it will be PINK */
+  }
+  .blue-text {
+    color: blue;
+  }
+</style>
+<h1 id="orange-text" class="pink-text blue-text">Hello World!</h1>
+________________________________________________________________________________
+<!-- NOTE: Everything else on the page is what you set the body too -->
+<p style="color: white"> whatever is in this will be white</p>
+________________________________________________________________________________
+
+We usually use decimals, or base 10 numbers, which use the symbols 0 to 9 for each digit.
+Hexadecimals (or hex) are base 16 numbers. This means it uses sixteen distinct symbols.
+Like decimals, the symbols 0-9 represents values zero to nine.
+Then A,B,C,D,E,F represent values ten to fifteen.
+Altogether, 0 to F can represent a digit in hexadecimal, giving us 16 total possible values.
+https://en.wikipedia.org/wiki/Hexadecimal
+https://en.wikipedia.org/wiki/RGB_color_model
+-------------------------------------------------------------------------------
+Hex= #000000
+<style>
+  .red-text {
+    color: #F00;
+  }
+  .fuchsia-text {
+    color: #F0F;
+  }
+  .cyan-text {
+    color: #0FF;
+  }
+  .green-text {
+    color: #0F0;
+  }
+</style>
+
+<h1 class="red-text">I am red!</h1>
+
+<h1 class="fuchsia-text">I am fuchsia!</h1>
+
+<h1 class="cyan-text">I am cyan!</h1>
+
+<h1 class="green-text">I am green!</h1>
+-------------------------------------------------------------------------------
+rgb(255, 165, 0)
+<style>
+  body {
+    background-color: rgb(0, 0, 0);
+  }
+</style>
+<style>
+  .red-text {
+    color: rgb(255, 0, 0);
+  }
+  .orchid-text {
+    color: rgb(218, 112, 214);
+  }
+  .sienna-text {
+    color: rgb(160, 82, 45);
+  }
+  .blue-text {
+    color: rgb(0, 0, 255);
+  }
+</style>
+
+<h1 class="red-text">I am red!</h1>
+
+<h1 class="orchid-text">I am orchid!</h1>
+
+<h1 class="sienna-text">I am sienna!</h1>
+
+<h1 class="blue-text">I am blue!</h1>
